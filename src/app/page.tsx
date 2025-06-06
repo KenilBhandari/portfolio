@@ -20,7 +20,7 @@ const Portfolio = () => {
     title: "FinVest – Simulated Stock Investing Platform",
     description:
       "A full-stack investing simulator inspired by Groww. Built with Next.js, TypeScript, and Razorpay integration, it lets users buy virtual stocks with real payments, track their performance, and compete on a public leaderboard.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Razorpay", "MongoDB"],
+    tech: ["Next.js", "TypeScript", "Tailwind", "Razorpay", "Supabase"],
     image: "/Hero-section.png",
     github: "https://finvest-pied.vercel.app/",
     live: "https://finvest-pied.vercel.app/"
