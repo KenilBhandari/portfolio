@@ -22,7 +22,7 @@ const Portfolio = () => {
       "A full-stack investing simulator inspired by Groww. Built with Next.js, TypeScript, and Razorpay integration, it lets users buy virtual stocks with real payments, track their performance, and compete on a public leaderboard.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Razorpay", "MongoDB"],
     image: "/Hero-section.png",
-    github: "#",
+    github: "https://finvest-pied.vercel.app/",
     live: "https://finvest-pied.vercel.app/"
   },
    {
@@ -31,7 +31,7 @@ const Portfolio = () => {
       "A simple yet powerful tool built with React and Tailwind CSS to help users plan savings, expenses, and investments over 40 years. It takes a clean monthly income input and generates a long-term financial forecast using Chart.js.",
     tech: ["React", "Tailwind", "Chart.js"],
     image: "/Trio-Hero.png",
-    github: "#",
+    github: "https://triofin.netlify.app/",
     live: "https://triofin.netlify.app/"
   }
 ];
