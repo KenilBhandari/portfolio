@@ -47,10 +47,15 @@ const skills = [
 ];
 
 
-  const ScrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setActiveSection(sectionId);
-  };
+const ScrollToSection = (sectionId: string) => {
+  if (sectionId === "resume") {
+    window.open("/Kenil-Resume.pdf", "_blank");
+    return; 
+  }
+
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  setActiveSection(sectionId);
+};
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -68,14 +73,15 @@ const skills = [
               Portfolio
             </div>
             <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Projects", "Contact"].map((item) => (
+              {["Home", "About", "Projects", "Resume", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => ScrollToSection(item.toLowerCase())}
-                  className="relative hover:text-blue-400 transition-colors duration-300 group"
+                  className={`relative hover:text-blue-400 transition-colors duration-300 group ${
+                    activeSection === item.toLowerCase() ? "text-blue-400" : ""}`}
                 >
                   {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full ${activeSection === item.toLowerCase() ? "w-full" : ""}`}></span>
                 </button>
               ))}
             </div>
